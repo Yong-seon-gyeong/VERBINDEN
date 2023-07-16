@@ -26,6 +26,7 @@ body {
 
 html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: none;
 }
 body.menu-open {
     overflow: hidden;
