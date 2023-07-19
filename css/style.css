@@ -625,12 +625,12 @@ button {
 }
 @media (max-width:500px) {
     .frame::before {
-        background-size: 70px;
+        background-size: 60px;
         width: 48px;
     }
 
     .frame::after {
-        background-size: 70px;
+        background-size: 60px;
         width: 48px;
     } 
 
@@ -855,6 +855,7 @@ button {
 
 .collections .grid-item p spen {
     font-size: 20px;
+    font-weignt: 500;
 }
 
 #section4 .more_btn {
