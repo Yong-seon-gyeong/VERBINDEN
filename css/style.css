@@ -80,7 +80,7 @@ header {
     margin-left: 30px;
 }
 
-.gnb_right a, .gnb_left a{
+.gnb_right > li > a, .gnb_left> li > a{
     display: block;
     font-weight: 500;
 }
