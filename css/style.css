@@ -627,11 +627,13 @@ button {
     .frame::before {
         background-size: 60px;
         width: 48px;
+        padding-right:25px
     }
 
     .frame::after {
         background-size: 60px;
         width: 48px;
+        padding-left:25px
     } 
 
     .swiper{
