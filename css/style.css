@@ -960,6 +960,18 @@ button {
     }
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #contact {
+        display: container;
+        height: 400px;
+        background-image: url(../images/contact.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-attachment: fixed; */
+        background-size: cover;
+    }
+}
+
 /*footer공통*/
 footer {
     text-align: center;
