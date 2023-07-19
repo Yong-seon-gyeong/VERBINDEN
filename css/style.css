@@ -274,24 +274,7 @@ button {
     transform: rotate3d(0, 0, 0, 90deg);
   }
   
-  /* .support {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    padding: 10px;
-    display: flex;
-  }
-  .support a {
-    margin: 0 10px;
-    color: #fff;
-    font-size: 1.8rem;
-    backface-visibility: hidden;
-    transition: all 150ms ease;
-  }
-  .support a:hover {
-    transform: scale(1.1);
-  } */
-  @media (max-width:450px) {
+    @media (max-width:450px) {
     .nav__link {
         font-size: 30px;
         padding: 30px 0;
@@ -844,10 +827,10 @@ button {
 .collections .grid-item .photo_box img {
     display: block;
     width: 100%;
-    transition: transform 0.5s ease;
+    transition: opacity 0.5s ease;
 }
 .collections .grid-item .photo_box img:hover{
-    transform: scale(1.2);
+    opacity: 0.5;
 }
 
 .collections .grid-item p {
@@ -959,22 +942,6 @@ button {
     .contact_inner {
         width: 100%;
     }
-}
-@media (max-width:600px){
-    /* #contact {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url(../images/contact.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        transform: translateZ(0);
-        will-change: transform;
-        
-    } */
 }
 
 /*footer공통*/
