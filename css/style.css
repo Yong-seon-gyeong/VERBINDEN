@@ -924,15 +924,31 @@ button {
 
 /*contact 공통*/
 #contact {
-    display: container;
     height: 400px;
-    background-image: url(../images/contact.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+    position: relative;
 }
 
+.contact_bg_wrap{
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+}
+
+.contact_bg{
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/contact.jpg);
+    background-size: cover;
+    background-position: center center;
+}
 .contact_inner {
     width: 1320px;
     height: 100%;
