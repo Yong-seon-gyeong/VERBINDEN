@@ -904,6 +904,9 @@ button {
     .collections p{
         text-align: left;
     }
+    .grid-item:nth-child(n+5){
+        display: none;
+    }
 
 }
 
@@ -913,6 +916,9 @@ button {
     }
     .collections {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .grid-item:nth-child(n+3){
+        display: none;
     }
 }
 
