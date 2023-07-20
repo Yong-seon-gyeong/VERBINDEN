@@ -898,7 +898,7 @@ button {
     }
 
     .collections {
-        height: 100%;
+        height: auto;
         grid-template-columns: repeat(2, 1fr);
     }
     .collections p{
