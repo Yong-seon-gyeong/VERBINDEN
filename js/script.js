@@ -46,27 +46,45 @@ $(document).click(function (e) {
 
 
 // collections more_btn 작동하기
+let numToggledImages = 0;
+
+function toggleImages(numToShow) {
+  const gridItems = $('.collections .grid-item');
+  gridItems.hide();
+  gridItems.slice(0, numToShow).show();
+  numToggledImages = numToShow;
+}
+
 $(window).on('resize', function () {
-    if ($(window).width() > 1303) {
-        $('.grid-item').show();
-    } else if ($(window).width() <= 1303 && $(window).width() >= 550) {
-        $('.grid-item:nth-child(n+5)').hide();
-        $('.grid-item:nth-child(-n+4)').show();
-    } else if ($(window).width() <= 583) {
-        $('.grid-item:nth-child(n+3)').hide();
+  const windowWidth = $(window).width();
+  if (windowWidth > 1303) {
+    $('.grid-item').show();
+  } else if (windowWidth <= 1303 && windowWidth >= 550) {
+    if (numToggledImages > 0) {
+      toggleImages(numToggledImages);
+    } else {
+      $('.grid-item:nth-child(n+5)').hide();
+      $('.grid-item:nth-child(-n+4)').show();
     }
+  } else if (windowWidth <= 583) {
+    if (numToggledImages > 0) {
+      toggleImages(numToggledImages);
+    } else {
+      $('.grid-item:nth-child(n+3)').hide();
+    }
+  }
 });
 
 $(window).trigger('resize');
 
 $('.more_btn').click(function () {
-    if ($(window).width() < 1321) {
-        if ($(window).width() < 583) {
-            $('.collections .grid-item:hidden').slice(0, 1).toggle();
-        } else {
-            $('.collections .grid-item:hidden').slice(0, 2).toggle();
-        }
+  if ($(window).width() < 1321) {
+    if ($(window).width() < 583) {
+      toggleImages(numToggledImages + 1);
+    } else {
+      toggleImages(numToggledImages + 2);
     }
+  }
 });
 
 
