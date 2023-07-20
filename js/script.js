@@ -65,9 +65,9 @@ $(window).on('resize', function (){
 $(window).trigger('resize');
 
 
-$(window).resize(function () {
-    showGridItems();
-});
+// $(window).resize(function () {
+//     showGridItems();
+// });
 
 $('.more_btn').click(function () {
     if ($(window).width() < 1321) {
