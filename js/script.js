@@ -46,28 +46,18 @@ $(document).click(function (e) {
 
 
 // collections more_btn 작동하기
-
-$(window).on('resize', function (){
+$(window).on('resize', function () {
     if ($(window).width() > 1303) {
         $('.grid-item').show();
-    }
-    else{
-        if ($(window).width() <= 1303 && $(window).width() >= 550) {
-            $('.grid-item:nth-child(n+5)').hide();
-            $('.grid-item:nth-child(-n+4)').show();
-        }
-        if ($(window).width()<= 583) {
-            $('.grid-item:nth-child(n+3)').hide();
-            }
+    } else if ($(window).width() <= 1303 && $(window).width() >= 550) {
+        $('.grid-item:nth-child(n+5)').hide();
+        $('.grid-item:nth-child(-n+4)').show();
+    } else if ($(window).width() <= 583) {
+        $('.grid-item:nth-child(n+3)').hide();
     }
 });
 
 $(window).trigger('resize');
-
-
-// $(window).resize(function () {
-//     showGridItems();
-// });
 
 $('.more_btn').click(function () {
     if ($(window).width() < 1321) {
@@ -78,6 +68,7 @@ $('.more_btn').click(function () {
         }
     }
 });
+
 
 //scroll_top_btn 적용하기
 $('.scroll_top').hide();
