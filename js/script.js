@@ -46,42 +46,23 @@ $(document).click(function (e) {
 
 
 // collections more_btn 작동하기
-function debounce(func, wait) {
-  let timeout;
-  return function () {
-    const context = this;
-    const args = arguments;
-    clearTimeout(timeout);
-    timeout = setTimeout(function () {
-      func.apply(context, args);
-    }, wait);
-  };
-}
-
-function handleWindowResize() {
-  if ($(window).width() > 1303) {
-    $('.grid-item').show();
-  } else if ($(window).width() <= 1303 && $(window).width() >= 550) {
-    $('.grid-item:nth-child(n+5)').hide();
-    $('.grid-item:nth-child(-n+4)').show();
-  } else if ($(window).width() <= 583) {
-    $('.grid-item:nth-child(n+3)').hide();
+$(document).ready(function () {
+  
+  function showMoreItems(gridItems, startIndex, numToShow) {
+    gridItems.slice(startIndex, startIndex + numToShow).show();
   }
-}
 
-$(window).on('resize', debounce(handleWindowResize, 200)); // Adjust debounce wait time as needed
+  $("#section4 .more_btn button").on("click", function () {
+    if ($(window).width() <= 1320 && $(window).width() > 600) {
 
-$(window).trigger('resize');
+      showMoreItems($(".collections .grid-item:hidden"), 0, 2);
+    } else if ($(window).width() <= 600) {
 
-$('.more_btn').click(function () {
-  if ($(window).width() < 1321) {
-    if ($(window).width() < 583) {
-      $('.collections .grid-item:hidden').slice(0, 1).toggle();
-    } else {
-      $('.collections .grid-item:hidden').slice(0, 2).toggle();
+      showMoreItems($(".collections .grid-item:hidden"), 0, 1);
     }
-  }
+  });
 });
+
 
 
 //scroll_top_btn 적용하기
